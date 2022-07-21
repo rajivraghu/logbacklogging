@@ -60,6 +60,14 @@
 						}
 					</pattern>
 				</pattern>
+				<stackTrace>
+					<throwableConverter class="net.logstash.logback.stacktrace.ShortenedThrowableConverter">
+						<maxDepthPerThrowable>30</maxDepthPerThrowable>
+						<maxLength>4096</maxLength>
+						<shortenedClassNameLength>20</shortenedClassNameLength>
+						<rootCauseFirst>true</rootCauseFirst>
+					</throwableConverter>
+				</stackTrace>
 			</providers>
 		</encoder>
 	</appender>
